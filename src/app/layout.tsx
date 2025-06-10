@@ -48,7 +48,9 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html suppressHydrationWarning lang="en">
       <head>
@@ -59,12 +61,19 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           crossOrigin="anonymous"
         ></script>
       </head>
-      <body className={cn("min-h-screen select-none bg-background antialiased", Poppins.className)}>
+      <body
+        className={cn(
+          "min-h-screen select-none bg-background antialiased",
+          Poppins.className
+        )}
+      >
         <Providers>
           <Disclaimer />
           <TopNavbar />
           <Sidebar>
-            <main className="container mx-auto max-w-full px-3 pb-8 pt-8 sm:px-5">{children}</main>
+            <main className="container mx-auto max-w-full px-3 pb-8 pt-8 sm:px-5">
+              {children}
+            </main>
           </Sidebar>
           <BottomNavbar />
         </Providers>
@@ -73,4 +82,4 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </body>
     </html>
   );
-}
+                                   }
