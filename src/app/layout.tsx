@@ -10,7 +10,7 @@ import Disclaimer from "@/components/ui/overlay/Disclaimer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { cn } from "@/utils/helpers";
-import Script from "next/script"; // ✅ الاستيراد الجديد
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -53,7 +53,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html suppressHydrationWarning lang="en">
       <body className={cn("min-h-screen select-none bg-background antialiased", Poppins.className)}>
-        {/* ✅ كود Plausible المتقدم */}
+        {/* Plausible analytics scripts */}
         <Script
           defer
           data-domain="index-voxinappindexcom.vercel.app"
@@ -71,6 +71,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             `,
           }}
         />
+        
+        {/* Your app content */}
         <Providers>
           <Disclaimer />
           <TopNavbar />
@@ -79,8 +81,17 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </Sidebar>
           <BottomNavbar />
         </Providers>
+        
+        {/* Other scripts */}
         <SpeedInsights debug={false} />
         <Analytics debug={false} />
+
+        {/* ---> ✅ Adsterra Ad Code <--- */}
+        <Script
+          strategy="lazyOnload"
+          src="//pl26884849.profitableratecpm.com/8e/a0/bb/8ea0bb0c08c7fa7d75b809cdabd2c25b.js"
+        />
+        
       </body>
     </html>
   );
