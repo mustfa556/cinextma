@@ -53,7 +53,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html suppressHydrationWarning lang="en">
       <body className={cn("min-h-screen select-none bg-background antialiased", Poppins.className)}>
-        {/* Plausible analytics scripts */}
+        {/* ✅ Plausible Analytics */}
         <Script
           defer
           data-domain="index-voxinappindexcom.vercel.app"
@@ -71,8 +71,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             `,
           }}
         />
-        
-        {/* Your app content */}
+
+        {/* ✅ Main App Layout */}
         <Providers>
           <Disclaimer />
           <TopNavbar />
@@ -81,18 +81,41 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </Sidebar>
           <BottomNavbar />
         </Providers>
-        
-        {/* Other scripts */}
+
+        {/* ✅ Vercel Insights */}
         <SpeedInsights debug={false} />
         <Analytics debug={false} />
 
-        {/* ---> ✅ Adsterra Ad Code <--- */}
+        {/* ✅ Ad Scripts */}
+
+        {/* Adsterra */}
         <Script
           strategy="lazyOnload"
           src="//pl26884849.profitableratecpm.com/8e/a0/bb/8ea0bb0c08c7fa7d75b809cdabd2c25b.js"
         />
-        
+
+        {/* HighPerformanceFormat Ad */}
+        <Script
+          id="ad-iframe-script-config"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+              atOptions = {
+                'key': '4e0bbdd4501b24987e3225a465ad447e',
+                'format': 'iframe',
+                'height': 300,
+                'width': 160,
+                'params': {}
+              };
+            `,
+          }}
+        />
+        <Script
+          id="ad-iframe-script"
+          strategy="lazyOnload"
+          src="//www.highperformanceformat.com/4e0bbdd4501b24987e3225a465ad447e/invoke.js"
+        />
       </body>
     </html>
   );
-}
+          }
