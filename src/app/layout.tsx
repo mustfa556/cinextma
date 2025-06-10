@@ -10,6 +10,7 @@ import Disclaimer from "@/components/ui/overlay/Disclaimer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { cn } from "@/utils/helpers";
+import Script from "next/script"; // ✅ الاستيراد الجديد
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -52,6 +53,24 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html suppressHydrationWarning lang="en">
       <body className={cn("min-h-screen select-none bg-background antialiased", Poppins.className)}>
+        {/* ✅ كود Plausible المتقدم */}
+        <Script
+          defer
+          data-domain="index-voxinappindexcom.vercel.app"
+          src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="plausible-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.plausible = window.plausible || function () {
+                (window.plausible.q = window.plausible.q || []).push(arguments)
+              }
+            `,
+          }}
+        />
         <Providers>
           <Disclaimer />
           <TopNavbar />
