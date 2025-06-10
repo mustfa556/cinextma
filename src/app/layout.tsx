@@ -10,7 +10,6 @@ import Disclaimer from "@/components/ui/overlay/Disclaimer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { cn } from "@/utils/helpers";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -52,27 +51,13 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html suppressHydrationWarning lang="en">
+      <head>
+        {/* AdSense Verification Script */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2627988096866482"
+     crossorigin="anonymous"></script>
+      </head>
+      
       <body className={cn("min-h-screen select-none bg-background antialiased", Poppins.className)}>
-        {/* ✅ Plausible Analytics */}
-        <Script
-          defer
-          data-domain="index-voxinappindexcom.vercel.app"
-          src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="plausible-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.plausible = window.plausible || function () {
-                (window.plausible.q = window.plausible.q || []).push(arguments)
-              }
-            `,
-          }}
-        />
-
-        {/* ✅ Main App Layout */}
         <Providers>
           <Disclaimer />
           <TopNavbar />
@@ -81,41 +66,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </Sidebar>
           <BottomNavbar />
         </Providers>
-
-        {/* ✅ Vercel Insights */}
         <SpeedInsights debug={false} />
         <Analytics debug={false} />
-
-        {/* ✅ Ad Scripts */}
-
-        {/* Adsterra */}
-        <Script
-          strategy="lazyOnload"
-          src="//pl26884849.profitableratecpm.com/8e/a0/bb/8ea0bb0c08c7fa7d75b809cdabd2c25b.js"
-        />
-
-        {/* HighPerformanceFormat Ad */}
-        <Script
-          id="ad-iframe-script-config"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `
-              atOptions = {
-                'key': '4e0bbdd4501b24987e3225a465ad447e',
-                'format': 'iframe',
-                'height': 300,
-                'width': 160,
-                'params': {}
-              };
-            `,
-          }}
-        />
-        <Script
-          id="ad-iframe-script"
-          strategy="lazyOnload"
-          src="//www.highperformanceformat.com/4e0bbdd4501b24987e3225a465ad447e/invoke.js"
-        />
       </body>
     </html>
   );
-          }
+}
