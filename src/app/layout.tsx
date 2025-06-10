@@ -52,11 +52,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html suppressHydrationWarning lang="en">
       <head>
-        {/* AdSense Verification Script */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2627988096866482"
-     crossorigin="anonymous"></script>
+        {/* Google AdSense Code */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2627988096866482"
+          crossOrigin="anonymous"
+        ></script>
       </head>
-      
       <body className={cn("min-h-screen select-none bg-background antialiased", Poppins.className)}>
         <Providers>
           <Disclaimer />
