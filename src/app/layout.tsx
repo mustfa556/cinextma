@@ -10,6 +10,7 @@ import Disclaimer from "@/components/ui/overlay/Disclaimer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { cn } from "@/utils/helpers";
+import Script from "next/script"; // استيراد مكون السكربت
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -60,6 +61,21 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2627988096866482"
           crossOrigin="anonymous"
         ></script>
+        
+        {/* Google Analytics Tag - START */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-XGGRPXZ5FS"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XGGRPXZ5FS');
+          `}
+        </Script>
+        {/* Google Analytics Tag - END */}
       </head>
       <body
         className={cn(
@@ -82,4 +98,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-                                   }
+}
