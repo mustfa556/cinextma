@@ -106,6 +106,9 @@ export default function RootLayout({
           strategy="afterInteractive"
           src="//cattleforcedlit.com/11/6b/21/116b2155a618cedac10e46ab3cff60d9.js"
         />
+        <script async="async" data-cfasync="false" src="//cattleforcedlit.com/b071600a2f12cf58f914e331aa42bfe1/invoke.js"></script>
+        <div id="container-b071600a2f12cf58f914e331aa42bfe1"></div>
+        
         <meta name="ppck-ver" content="21bdc9e514f7d3a08b2979f68768937e" />
 
         <SpeedInsights debug={false} />
