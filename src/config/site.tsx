@@ -119,7 +119,7 @@ export const siteConfig = {
     ],
   },
   socials: {
-    github: "https://github.com/wisnuwirayuda15/cinextma",
+    tiktok: "https://www.tiktok.com/@index.9?_t=ZS-8x8n5LiYL3g&_r=1",
   },
 };
 
