@@ -99,9 +99,17 @@ export default function RootLayout({
           </Sidebar>
           <BottomNavbar />
         </Providers>
+
+        {/* ✅ PropellerAds Script */}
+        <Script
+          id="propellerads-script"
+          strategy="afterInteractive"
+          src="//cattleforcedlit.com/11/6b/21/116b2155a618cedac10e46ab3cff60d9.js"
+        />
+
         <SpeedInsights debug={false} />
         <Analytics debug={false} />
       </body>
     </html>
   );
-        }
+  }
