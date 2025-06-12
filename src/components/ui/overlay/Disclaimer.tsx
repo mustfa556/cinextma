@@ -52,32 +52,30 @@ const Disclaimer: React.FC = () => {
         <ModalBody>
           <ScrollShadow hideScrollBar className="space-y-4">
             <p>
-              Welcome to index - a free and open-source movie streaming website. Please read this
-              disclaimer carefully before using this website.
+              لا نعرض أي إعلان. الإعلانات التي تظهر في الموقع تأتي فقط من خوادم البث الخارجية.
             </p>
             <p>
-              This site was developed by Voxin. This site only displays movies and TV series
-              available on the internet, but we have collected them in one site and it does not 
-              aim to promote or encourage digital piracy in any way.
+              مرحبًا بك في Index — موقع مجاني ومفتوح المصدر لمشاهدة
+              الأفلام والمسلسلات. يرجى قراءة هذا التنبيه القانوني بعناية قبل استخدام الموقع.
             </p>
             <p>
-              All content displayed on index (including but not limited to movies, images,
-              posters, and related information) is sourced from{" "}
-              <strong>third-party providers through APIs or embedding.</strong> I do not host,
-              store, or distribute any media files on my servers. The website merely aggregates
-              content that is already available on the internet.
+              تم تطوير هذا الموقع بواسطة Voxin، ويقوم فقط بعرض محتوى 
+              (أفلام ومسلسلات) متوفر على الإنترنت من خلال واجهات برمجة التطبيقات (APIs) أو التضمين (Embedding). 
+              نحن لا نقوم باستضافة أو تخزين أي ملفات وسائط على خوادمنا.
             </p>
             <p>
-              By using index, you acknowledge that I bears no responsibility for user actions,
-              content accuracy, or any direct or indirect damages arising from the use of this
-              website. Users are solely responsible for their actions while using this service. I
-              respect intellectual property rights and will respond to legitimate requests from
-              copyright holders for content removal.
+              كل المحتوى المعروض على Index، بما في ذلك الأفلام، الصور، الملصقات، والمعلومات المرتبطة، يتم جمعه
+              من مزودين خارجيين. الموقع لا يشجع أو يروج للقرصنة الرقمية بأي شكل من الأشكال.
+
             </p>
             <p>
-              This site is a prototype for the Index platform, coming soon to iOS, Android, and TV. 
-              By using Index, you agree to these terms and conditions and acknowledge that you use
-              the service at your own risk. Owned by: Voxin. Thank you for reading.
+              باستخدامك لموقع Index، فإنك تقر بأن المسؤولية تقع على عاتقك بشكل كامل، سواء من حيث الاستخدام أو دقة المحتوى.
+              نحن غير مسؤولين عن أي ضرر مباشر أو غير مباشر ناتج عن استخدام الموقع
+              نحن نحترم حقوق الملكية الفكرية وسنقوم بالاستجابة لأي طلبات قانونية من أصحاب الحقوق لحذف أي محتوى مخالف.
+              هذا الموقع يُعتبر نموذجًا أوليًا لمنصة Index، التي ستتوفر قريبًا على أجهزة iOS، Android، وSmart TV. باستخدامك للموقع
+              ، فإنك توافق على هذه الشروط وتقر بأنك تستخدم الخدمة على مسؤوليتك الخاصة
+              المالك: Voxin
+              شكرًا لاستخدامك Index.
             </p>
           </ScrollShadow>
         </ModalBody>
