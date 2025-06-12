@@ -74,10 +74,10 @@ const shareButtons = [
 
 const ShareButton: React.FC<ShareButtonProps> = ({ title, id }) => {
   const url = `https://${location.hostname}/movie/${id}`;
-  const description = `Check out and stream ${title} on Cinextma for FREE!!`;
+  const description = `Check out and stream ${title} on index for FREE!!`;
   const shareIcon = <IoIosShareAlt size={20} />;
   const trigger = <IconButton icon={shareIcon} variant="ghost" tooltip="Share" />;
-  const hashtags = ["cinextma", "free", "movies", "streaming"];
+  const hashtags = ["index", "free", "movies", "streaming"];
 
   return (
     <VaulDrawer trigger={trigger} backdrop="blur" title="Share via">
