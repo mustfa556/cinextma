@@ -110,7 +110,14 @@ export default function RootLayout({
         <div id="container-b071600a2f12cf58f914e331aa42bfe1"></div>
         
         <meta name="ppck-ver" content="21bdc9e514f7d3a08b2979f68768937e" />
-
+       
+   
+ <script type="text/javascript">
+   var uid = '491162';
+   var wid = '741353';
+   var pop_tag = document.createElement('script');pop_tag.src='//cdn.popcash.net/show.js';document.body.appendChild(pop_tag);
+   pop_tag.onerror = function() {pop_tag = document.createElement('script');pop_tag.src='//cdn2.popcash.net/show.js';document.body.appendChild(pop_tag)};
+</script>
         <SpeedInsights debug={false} />
         <Analytics debug={false} />
       </body>
