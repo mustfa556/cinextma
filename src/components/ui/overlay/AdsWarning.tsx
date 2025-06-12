@@ -41,18 +41,20 @@ const AdsWarning: React.FC = () => {
         <ModalBody>
           <ScrollShadow hideScrollBar className="space-y-4">
             <p className="text-center">
-              As our content is hosted by various third party providers, you may encounter pop up
-              advertisements while streaming. To improve your viewing experience, we suggest using
-              an ad-blocker like{" "}
+              قد تواجه إعلانات منبثقة أثناء مشاهدة المحتوى، وذلك لأن الأفلام والمسلسلات
+              يتم عرضها من خلال خوادم خارجية تابعة لأطراف ثالثة. لتحسين تجربة المشاهدة، ننصح باستخدام أداة لحظر الإعلانات (Ad-blocker) 
+              في حال لم يعمل الفيلم أو توقف البث، يرجى تجربة خادم (سيرفر)
+              آخر من القائمة المتوفرة داخل المشغل. بعض الخوادم قد تكون أسرع أو أكثر استقرارًا من غيرها حسب المحتوى ومصدره.
+              like{" "}
               <Link href="https://ublockorigin.com/" target="_blank" className="font-bold">
                 uBlock Origin
               </Link>{" "}
-              or{" "}
+              أو{" "}
               <Link href="https://adblockplus.org/" target="_blank" className="font-bold">
                 Adblock Plus
               </Link>
-              . Please be aware that we don't have control over the ads displayed and cannot be held
-              responsible for their content or any issues they may cause.
+              . نحن نعمل على توفير أفضل تجربة ممكنة، لكن التحكم الكامل بالخوادم الخارجية غير ممكن، لذا نشكركم على تفهّمكم.
+
             </p>
           </ScrollShadow>
         </ModalBody>
