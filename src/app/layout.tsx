@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head>
-        {/* Google AdSense Code */}
+        {/* ✅ Google AdSense */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2627988096866482"
@@ -98,6 +98,13 @@ export default function RootLayout({
             })();
           `}
         </Script>
+
+        {/* ✅ Adstreat Ads Script */}
+        <Script
+          id="adstreat"
+          strategy="afterInteractive"
+          src="//cattleforcedlit.com/76/37/f6/7637f684be4d11f9e9fb6ff422bd5143.js"
+        />
       </head>
       <body
         className={cn(
