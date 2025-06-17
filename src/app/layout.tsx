@@ -99,14 +99,12 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* ✅ Adstreat Ads Script */}
+        {/* ✅ Adstreat Base Script */}
         <Script
-          id="adstreat"
+          id="adstreat-base"
           strategy="afterInteractive"
-         src="//cattleforcedlit.com/76/37/f6/7637f684be4d11f9e9fb6ff422bd5143.js"
-          />
-         <script async="async" data-cfasync="false" src="//cattleforcedlit.com/73f4b2dd41678e318a9f2e4a5598ea54/invoke.js"></script>
-         <div id="container-73f4b2dd41678e318a9f2e4a5598ea54"></div> 
+          src="//cattleforcedlit.com/76/37/f6/7637f684be4d11f9e9fb6ff422bd5143.js"
+        />
       </head>
       <body
         className={cn(
@@ -120,6 +118,16 @@ export default function RootLayout({
           <Sidebar>
             <main className="container mx-auto max-w-full px-3 pb-8 pt-8 sm:px-5">
               {children}
+
+              {/* ✅ إعلان Adstreat دائم */}
+              <div className="mt-6 text-center">
+                <div id="container-73f4b2dd41678e318a9f2e4a5598ea54" />
+                <Script
+                  id="adstreat-invoke"
+                  strategy="afterInteractive"
+                  src="//cattleforcedlit.com/73f4b2dd41678e318a9f2e4a5598ea54/invoke.js"
+                />
+              </div>
             </main>
           </Sidebar>
           <BottomNavbar />
@@ -129,4 +137,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-        }
+                                   }
