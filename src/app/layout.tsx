@@ -68,7 +68,7 @@ export default function RootLayout({
           content="RdURBeCCCPWS5l2PDhYe3rbVYrnDhgaiIV2sEY9qCfs"
         />
 
-        {/* Google Analytics Tag - START */}
+        {/* ✅ Google Analytics */}
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-XGGRPXZ5FS"
@@ -81,7 +81,23 @@ export default function RootLayout({
             gtag('config', 'G-XGGRPXZ5FS');
           `}
         </Script>
-        {/* Google Analytics Tag - END */}
+
+        {/* ✅ Matomo Analytics */}
+        <Script id="matomo" strategy="afterInteractive">
+          {`
+            var _paq = window._paq = window._paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+              var u="https://indexapnetlifyapp.matomo.cloud/";
+              _paq.push(['setTrackerUrl', u+'matomo.php']);
+              _paq.push(['setSiteId', '1']);
+              var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+              g.async=true; g.src='https://cdn.matomo.cloud/indexapnetlifyapp.matomo.cloud/matomo.js'; 
+              s.parentNode.insertBefore(g,s);
+            })();
+          `}
+        </Script>
       </head>
       <body
         className={cn(
@@ -98,10 +114,10 @@ export default function RootLayout({
             </main>
           </Sidebar>
           <BottomNavbar />
-        </Providers>  
+        </Providers>
         <SpeedInsights debug={false} />
         <Analytics debug={false} />
       </body>
     </html>
   );
-  }
+        }
