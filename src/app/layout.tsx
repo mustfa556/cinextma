@@ -103,8 +103,10 @@ export default function RootLayout({
         <Script
           id="adstreat"
           strategy="afterInteractive"
-          src="//cattleforcedlit.com/76/37/f6/7637f684be4d11f9e9fb6ff422bd5143.js"
-        />
+         src="//cattleforcedlit.com/76/37/f6/7637f684be4d11f9e9fb6ff422bd5143.js"
+          />
+         <script async="async" data-cfasync="false" src="//cattleforcedlit.com/73f4b2dd41678e318a9f2e4a5598ea54/invoke.js"></script>
+         <div id="container-73f4b2dd41678e318a9f2e4a5598ea54"></div> 
       </head>
       <body
         className={cn(
